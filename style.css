@@ -1,0 +1,146 @@
+/* Estilos para presentación de laptop VM-25L */
+:root {
+    --bg: #f4f7fb;
+    --surface: #ffffff;
+    --primary: #0c5c9f;
+    --accent: #2d8fce;
+    --text: #1f2937;
+    --muted: #556077;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
+
+.site-header {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: #fff;
+    padding: 4rem 1rem 3rem;
+    text-align: center;
+}
+
+.header-content {
+    max-width: 780px;
+    margin: 0 auto;
+}
+
+.badge {
+    display: inline-block;
+    margin-bottom: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.2);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.85rem;
+}
+
+h1 {
+    font-size: clamp(2.5rem, 4vw, 4rem);
+    margin: 0;
+}
+
+.intro {
+    margin: 1.25rem auto 0;
+    max-width: 620px;
+    line-height: 1.75;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.container {
+    max-width: 1080px;
+    margin: -2.5rem auto 2rem;
+    padding: 0 1rem 2rem;
+}
+
+.descripcion,
+.destacada {
+    background: var(--surface);
+    border-radius: 24px;
+    padding: 2rem;
+    box-shadow: 0 18px 60px rgba(17, 49, 88, 0.08);
+    margin-bottom: 1.5rem;
+}
+
+.descripcion h2,
+.destacada h2 {
+    margin-top: 0;
+    font-size: 1.75rem;
+    letter-spacing: -0.03em;
+}
+
+.descripcion p,
+.destacada p,
+.destacada ul {
+    color: var(--muted);
+    line-height: 1.8;
+    font-size: 1rem;
+}
+
+.destacada-card {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.destacada ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0;
+}
+
+.destacada li {
+    margin-bottom: 0.75rem;
+    padding-left: 1.4rem;
+    position: relative;
+}
+
+.destacada li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.destacada-imagen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.laptop-image {
+    width: 100%;
+    max-width: 420px;
+    border-radius: 24px;
+    box-shadow: 0 24px 60px rgba(17, 49, 88, 0.18);
+    object-fit: cover;
+    display: block;
+}
+
+.site-footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.95rem;
+    padding: 1rem 0 2rem;
+}
+
+@media (max-width: 760px) {
+    .destacada-card {
+        grid-template-columns: 1fr;
+    }
+
+    .site-header {
+        padding-top: 3rem;
+    }
+}
+
